@@ -28,7 +28,7 @@ axios
         if (hasChanges) description += changes
 
         if (success) {
-            description += "\n\n**Download:** [asteroid-client-" + version + "-" + build + "](" + downloadUrl + ")"
+            description += "\n\n**Download:** [asteroid-client-" + version + "-" + build + "](" + "placeholder.com" + ")"
         }
 
         const webhook = {
