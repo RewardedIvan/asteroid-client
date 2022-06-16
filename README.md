@@ -17,10 +17,8 @@
     <img src="https://tokei.rs/b1/github/RewardedIvan/asteroid-client" alt="GitHub lines of code"/>
     <img src="https://img.shields.io/github/contributors/RewardedIvan/asteroid-client" alt="GitHub contributors"/>
     <br>
-    <!-- <img src="https://www.codefactor.io/repository/github/RewardedIvan/asteroid-client/badge" alt="CodeFactor"/>
+    <img src="https://www.codefactor.io/repository/github/RewardedIvan/asteroid-client/badge" alt="CodeFactor"/>
     <img src="https://circleci.com/gh/RewardedIvan/asteroid-client/tree/master.svg?style=shield" alt="CircleCI"/>
-    set those up later
-    -->
 </div>
 
 ## Usage
