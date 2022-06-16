@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/github/contributors/RewardedIvan/asteroid-client" alt="GitHub contributors"/>
     <br>
     <img src="https://www.codefactor.io/repository/github/RewardedIvan/asteroid-client/badge" alt="CodeFactor"/>
-    <img src="https://circleci.com/gh/RewardedIvan/asteroid-client/tree/main.svg?style=svg" alt="CircleCI"/>
+    <img src="https://circleci.com/gh/RewardedIvan/asteroid-client/tree/main.svg?style=shield" alt="CircleCI"/>
 </div>
 
 ## Usage
