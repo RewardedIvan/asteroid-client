@@ -15,6 +15,7 @@ axios
         let success = true
         let description = ""
         const Artifacts = JSON.parse(await axios.get("https://circleci.com/api/v2/project/github/RewardedIvan/asteroid-client/" + build + "/artifacts"))
+        console.log(Artifacts)
 
         description += "**Branch:** " + branch
         description += "\n**Status:** " + (success ? "success" : "failure")
@@ -30,7 +31,7 @@ axios
         if (hasChanges) description += changes
 
         if (success) {
-            description += "\n\n**Download:** [asteroid-client-" + version + "-" + build + "](" + Artifacts["items"][3] + ")"
+            description += "\n\n**Download:** [asteroid-client-" + version + "-" + build + "](" + Artifacts[3] + ")"
         }
         
         const webhook = {
