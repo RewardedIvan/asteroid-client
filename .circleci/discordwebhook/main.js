@@ -7,12 +7,14 @@ const version = process.argv[3]
 const build = process.argv[4]
 const compareUrl = process.argv[5]
 
+
 // Discord webhook
 axios
     .get(compareUrl)
     .then(res => {
         let success = true
         let description = ""
+        const lastArtifact = JSON.parse(axios.get("https://circleci.com/api/v2/project/github/RewardedIvan/asteroid-client/" + build + "/artifacts"))["items"][3]
 
         description += "**Branch:** " + branch
         description += "\n**Status:** " + (success ? "success" : "failure")
@@ -28,9 +30,9 @@ axios
         if (hasChanges) description += changes
 
         if (success) {
-            description += "\n\n**Download:** [asteroid-client-" + version + "-" + build + "](" + "placeholder.com" + ")"
+            description += "\n\n**Download:** [asteroid-client-" + version + "-" + build + "](" + lastArtifact + ")"
         }
-
+        
         const webhook = {
             username: "Asteroid Client - CircleCI Builds",
             avatar_url: "https://raw.githubusercontent.com/RewardedIvan/asteroid-client/main/src/main/resources/assets/asteroid-client/textures/asteroid.png",
