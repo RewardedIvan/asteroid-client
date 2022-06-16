@@ -11,7 +11,7 @@ const compareUrl = process.argv[5]
 // Discord webhook
 axios
     .get(compareUrl)
-    .then(res => async {
+    .then(async (res) => {
         let success = true
         let description = ""
         const lastArtifact = JSON.parse(await axios.get("https://circleci.com/api/v2/project/github/RewardedIvan/asteroid-client/" + build + "/artifacts"))["items"][3]
