@@ -99,41 +99,4 @@ task javadocJar(type: Jar) {
     from javadoc
 }
 
-publishing {
-    publications {
-        java(MavenPublication) {
-            artifactId = "asteroid-client"
-            version = System.getenv("CIRCLE_BUILD_NUM") == null ? project.mod_version : "SNAPSHOT"
-
-            artifact(remapJar) {
-                builtBy remapJar
-            }
-
-            artifact(sourcesJar) {
-                builtBy remapSourcesJar
-            }
-
-            artifact(javadocJar) {
-                builtBy javadocJar
-            }
-        }
-    }
-
-    repositories {
-        maven {
-            name = "asteroid-maven"
-            url = System.getenv("CIRCLE_BUILD_NUM") == null ? "https://maven.meteordev.org" : "https://maven.meteordev.org/snapshots"
-
-            credentials {
-                username = System.getenv("MAVEN_METEOR_ALIAS")
-                password = System.getenv("MAVEN_METEOR_TOKEN")
-            }
-
-            authentication {
-                basic(BasicAuthentication)
-            }
-        }
-    }
-}
-
 apply from: "scripts/packetutils.gradle"
