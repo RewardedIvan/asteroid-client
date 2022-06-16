@@ -1,0 +1,16 @@
+# This is a basic workflow that is manually triggered
+
+name: CircleCI
+
+on:
+  release:
+    types: [published]
+jobs:
+  trigger-circleci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: asteroid-client
+        id: f09d0949-23c2-41df-9bec-d356ae0ffd83
+        uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0.4
+        env:
+          CCI_TOKEN: ${{ secrets.CCI_TOKEN }}
