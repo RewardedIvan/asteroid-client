@@ -41,4 +41,3 @@ jobs:
             cd .circleci/discordwebhook
             yarn install
             yarn start << pipeline.git.branch >> << pipeline.parameters.version >> $CIRCLE_BUILD_NUM https://api.github.com/repos/RewardedIvan/asteroid-client/compare/<< pipeline.git.base_revision >>...<< pipeline.git.revision >>
-            echo "${CIRCLE_BUILD_NUM}"
