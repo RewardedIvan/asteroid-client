@@ -27,7 +27,7 @@ jobs:
     steps:
       - checkout
 
-      - run: ./gradlew build -Pcommit=\<< pipeline.git.revision \>
+      - run: ./gradlew build -Pcommit=\<< pipeline.git.revision
 
       - store_artifacts:
           path: build/libs/
